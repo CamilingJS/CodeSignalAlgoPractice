@@ -1,1 +1,2 @@
-"# CodeSignalAlgoPractice" 
+# CodeSignalAlgoPractice
+
