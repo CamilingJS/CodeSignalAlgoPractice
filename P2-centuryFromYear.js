@@ -21,3 +21,13 @@
 
 // The number of the century the year is in.
 
+function centuryFromYear(year) {
+    if (year % 100 === 0){
+        return year/100
+    }
+    if (year % 100 !== 0){
+        return year/100 + 1 - (year%100*.01)
+    }
+    return
+}
+
