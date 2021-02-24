@@ -21,16 +21,25 @@
 
 // The number of the century the year is in.
 
-function centuryFromYear(year) {
-    if (year <= 100) {
-        return 1
-    }
+// function centuryFromYear(year) {
+//     if (year <= 100) {
+//         return 1
+//     }
+//     if (year % 100 === 0){
+//         return year/100
+//     }
+//     if (year % 100 !== 0){
+//         return year/100 + 1 - (year%100*.01)
+//     }
+//     return
+    
+// }
+
+function centuryFromYear(year) {    
     if (year % 100 === 0){
-        return year/100
+        return Math.floor(year/100)
     }
     if (year % 100 !== 0){
-        return year/100 + 1 - (year%100*.01)
+        return Math.floor(year/100 + 1)
     }
-    return
-    
 }
