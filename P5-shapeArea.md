@@ -22,3 +22,7 @@
 ### [output] integer
 
 ### The area of the n-interesting polygon.
+
+## The area of a 1x1 polygon is 1
+## The area of a 2x2 polygon is 4
+## As you add 1 to n of a nxn polygon the multiplyer increases by 4
