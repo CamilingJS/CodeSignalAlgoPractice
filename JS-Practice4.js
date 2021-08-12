@@ -57,7 +57,11 @@ while(i<10){
     ☑️ set the break condition to be when the string length is > 10
     ☑️ and add a new "A" character to the end of i every time the loop runs.
 */
-
+let j = ""; 
+while( j.length <= 10){    
+  j+= "A"
+  console.log(j);
+}
 
 
 /*
@@ -67,3 +71,12 @@ while(i<10){
     ☑️ on each loop iteration, print out the key and value in a string formatted like so:
         "ram spec is 8GB", "cpu spec is quad core", "storage spec is 1TB"
 */
+
+let computer = {
+  ram: "8GB",
+  cpu: "quad core",
+  store: "1TB"
+};
+for (let key in computer) {
+  console.log(`${key} spec is ${computer[key]}`);
+}
