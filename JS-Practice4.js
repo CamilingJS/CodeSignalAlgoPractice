@@ -80,3 +80,5 @@ let computer = {
 for (let key in computer) {
   console.log(`${key} spec is ${computer[key]}`);
 }
+
+
