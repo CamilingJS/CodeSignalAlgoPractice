@@ -27,6 +27,14 @@
         >> these should return: "5", "12", "617"
 */
 
+function divideNum(num){
+  return Math.floor(num/2); 
+}
+console.log(divideNum(10)); 
+console.log(divideNum(25)); 
+console.log(divideNum(1235)); 
+
+
 /*
     ☑️ now, create a function expression that 
         >> 1. takes a string as an argument
@@ -37,6 +45,13 @@
     ☑️ BONUS: change your fn to return the original string capitalized
         >> these should return "Hello", "World", "I love javascript"
 */
+
+const string = function(str){
+  return str[0].toUpperCase(); 
+}
+console.log(string('hello'))
+console.log(string('world'))
+console.log(string('i love javascript'))
 
 /*
     ☑️ Now, let's get some practice with the string methods
@@ -52,6 +67,13 @@
         >> "split" the words apart into an array (should return ["i", "love", "javascript"])
 */
 
+console.log('i love javascript'.indexOf("j"));
+console.log('i love javascript'.indexOf("z"));
+console.log('i love javascript'.slice(7));
+console.log('i love javascript'.slice(2,6));
+console.log('i love javascript'.replace("javascript", "HTML"));
+console.log('i love javascript'.split(" "));
+
 /*
     ☑️ let's get some practice with the number methods
     ☑️ given the number 1000
@@ -59,7 +81,11 @@
         >> add a dollar sign to the front of this string
         >> Use Math.max to compare your age with my age (28)
 */
-
+let numb = 1000; 
+console.log(numb.toFixed(2));
+console.log(`$${numb.toFixed(2)}`)
+let ages = (28,21,31);
+console.log(Math.max(ages))
 
 /*
     ☑️ let's get some practice with the array methods
@@ -74,6 +100,15 @@
             (remember, this DOES modify the array "in place")
 
 */
+let array = [1,2,3,4];
+let lastTwo = array.splice(2)
+console.log(array)
+let array1 = array.concat((lastTwo))
+array1.push(5,6)
+console.log(array1)
+array1.splice(3, 5, 6);
+console.log(array1)
+
 
 /*
     CHAINING
@@ -105,6 +140,9 @@
         cool, right?
 */
 
+let strA = "abc";
+console.log(strA.split("").reverse().join(""));
+
 /*
     ☑️ ok, now it's your turn (for real this time)
         Chain these steps into a single line! (Don't use intermediary variables)
@@ -115,6 +153,9 @@
         >> Finally, let's use DIRECT INDEXING to just get the cents (ex. "00")
 */
 
+let myNumber = 100;
+console.log(myNumber.toFixed(2).split(".")[1])
+
 /*
     ☑️ one more, create a string, var coachName = "jan frey"...
         >> Let's split the words apart
@@ -123,3 +164,6 @@
         >> Concat it, to create a string that says "F is the last initial"
         >> And finally, wrap the whole thing in a console.log!
 */
+
+let coachName = "jan frey";
+console.log(coachName.split(" ")[1][0].toLocaleUpperCase() + " is the last initial")
