@@ -15,12 +15,11 @@ let n = 13;
 var countOdd = function(n) {
   let oddCount = 0; 
   while (n--){
-    n-1; 
     if (n%2 !=0){
       oddCount++; 
     }
   }
   return oddCount; 
-  
+
 }
 console.log(countOdd(n));
