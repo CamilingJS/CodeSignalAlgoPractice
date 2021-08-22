@@ -25,11 +25,35 @@ var nums = [1, 2, 3, 4];
     ☑️ write some code to check if any / "some" numbers in nums are greater than 3
 */
 
+const isPositive = nums.every( num => {
+  if (num >= 0) {
+    return true; 
+  }
+})
+console.log(isPositive);
+
+const isGreaterThanTree = nums.some(num => {
+  if (num > 3) {
+    return true; 
+  }
+})
+console.log(isGreaterThanTree)
+
+
+
 /*
     FOR EACH number in nums
     ☑️ print out each number one at a time (use forEach, not a loop)
     ☑️ print strings formatted like so ("1 sheep", "2 sheep", "3 sheep"...) to the console
 */
+
+nums.forEach( num => {
+  console.log(num)
+} )
+
+nums.forEach(num => {
+  console.log(`${num} sheep`)
+})
 
 /*
     MAP is arguably the most commonly used higher order method
@@ -40,6 +64,13 @@ var nums = [1, 2, 3, 4];
         indicating whether it is positive or not
         (ex. [true, true, ...])
 */
+const doubledNum = nums.map(num => num * 2)
+console.log(doubledNum);
+
+const dollarAmnt = nums.map(num => {
+  return `$${num.toFixed(2)}`
+})
+console.log(dollarAmnt)
 
 /*
     Let's FILTER things down
@@ -48,6 +79,20 @@ var nums = [1, 2, 3, 4];
     ☑️ write some code that creates a filtered array where only even numbers remain
         (HINT: %)
 */
+
+const filteredNeg = nums.filter(num => {
+  if (num <0 ){
+    return true; 
+  }
+})
+console.log(filteredNeg)
+
+const filteredEven = nums.filter(num => {
+  if (num %2 === 0){
+    return true; 
+  }
+})
+console.log(filteredEven)
 
 /*
     REDUCE the complexity (warning: challenging)
@@ -58,6 +103,16 @@ var nums = [1, 2, 3, 4];
         result should be ("1 sheep, 2 sheep, 3 sheep...")
         (Feel free to use Google, & don't worry if you can't get this! It's very challenging)
 */
+const sumArr = nums.reduce((sum, num) =>{
+  const total = sum + num; 
+  return total; 
+},0)
+console.log(sumArr)
+
+const sheepString = nums.reduce((str, num) =>{
+  return str + num + ' sheep, '
+}, "")
+console.log(sheepString.slice(0,-2));
 
 /*
     HIGHER ORDER CHAINING
@@ -77,3 +132,12 @@ var nums = [1, 2, 3, 4];
         >> 1. MAP nums to create a new array, with triple each number
         >> 2. REDUCE to add the numbers (re use your reduce code here)
 */
+
+let coach = 'aaron';
+console.log(coach.split("").filter(letter => letter === "a").join(""))
+
+let tripNum = nums.map(num => num*3).reduce((acc, num) => {
+  const sum = acc + num
+  return sum; 
+})
+console.log(tripNum)
