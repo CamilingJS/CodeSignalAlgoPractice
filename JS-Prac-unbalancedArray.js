@@ -12,32 +12,19 @@
 
 let nums = [12, 1, 21, -21, -1];
 
-var unbalancedArray = function(nums) {
-  let sortedNums = nums.sort( (a,b) => a-b );
-  let arrPos = sortedNums.filter(num => {
-    if (num > 0){
-      return num; 
-    }
-  })
-  console.log(arrPos)
-  let arrNeg = sortedNums.filter(num => {
-    if (num < 0) {
-      return num; 
-    }
-  })
-  console.log(arrNeg)
-  
-  for (let i = 0; i < nums.length; i++) {
-    const found = arrPos.find(num => {
+let unbalancedArray = function(nums) {
 
-      if (arrPos[i] + arrNeg[i] != 0){
-        return arrPos[i];
-  
-      }
-      console.log(arrPos[i]);
-    })
-  }
+  return nums.reduce((acc, num) => {
+    return acc + num; 
+  })
+
+  // let sum = 0; 
+  // for (let n of nums) {
+  //   sum += n; 
+  // }
+  // return sum; 
 
 }
+
 
 console.log(unbalancedArray(nums))
