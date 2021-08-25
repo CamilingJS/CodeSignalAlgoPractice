@@ -6,3 +6,11 @@ const users = [
 
 // {username: full user object}
 
+const usersMap = {};
+
+for (let user of users){
+  console.log(user.username);
+  usersMap[user.username] = user; 
+}
+
+console.log(usersMap);
