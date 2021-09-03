@@ -1,21 +1,16 @@
+sequence = [1, 1, 1, 2, 3, 4]
+
 function almostIncreasingSequence(sequence) {
-  sequence.sort((a,b)=>(a-b)); 
-  
-  console.log(`before loop ${sequence}`)
-  const unique = Array.from(new Set(sequence));
-  // if (sequence.length === unique.length) {
-  //     return false; 
-  // }
-  for (let i = 0; i < sequence.length; i++) {
-      if (sequence[i] >= sequence[i+1]) {
-          console.log('false');
-          return false; 
-      } if (sequence[i+1] = sequence[i-1]) {
-          console.log('true');
-          return true; 
-      }
-      
-     
-  }
-  
+    const counter = {}
+    for(let num of sequence){
+        console.log(counter[num])
+        if(counter[num]){
+            counter[num]++;
+        } else {
+            counter[num]=1;
+        }
+    }
+    return counter
 }
+console.log(counter)
+console.log(almostIncreasingSequence(sequence))
