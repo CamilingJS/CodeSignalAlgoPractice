@@ -38,13 +38,10 @@
 
 let nthFibonacci = function (num, cache) {
   cache = cache || {};
-
   if(cache[num]) return cache[num];
   if(num === 0) return 0; 
   if (num < 3) return 1; 
-
   return cache[num] = nthFibonacci(num - 1, cache) + nthFibonacci(num-2, cache)
-
 }
 
 console.log(nthFibonacci(50))
