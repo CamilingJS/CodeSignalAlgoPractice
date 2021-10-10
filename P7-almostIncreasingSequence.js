@@ -1,16 +1,19 @@
-sequence = [1, 1, 1, 2, 3, 4]
+sequence = [1, 2, 1, 2]
 
 function almostIncreasingSequence(sequence) {
-    const counter = {}
-    for(let num of sequence){
-        console.log(counter[num])
-        if(counter[num]){
-            counter[num]++;
-        } else {
-            counter[num]=1;
+    let count = 0; 
+    for (let i = 0; i < sequence.length; i++){
+        let current = sequence[i]
+        if (current <= sequence[i-1]){
+            count++;
+            if (current <= sequence[i-2] && sequence[i+1] <= sequence[i-1]){
+                return false; 
+            }
         }
     }
-    return counter
+
+    return count <= 1; 
 }
-console.log(counter)
-console.log(almostIncreasingSequence(sequence))
+
+console.log(almostIncreasingSequence(sequence)); 
+
