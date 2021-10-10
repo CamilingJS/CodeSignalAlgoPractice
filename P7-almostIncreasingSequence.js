@@ -1,4 +1,4 @@
-sequence = [1, 2, 1, 2]
+sequence = [1, 2, 1]
 
 function almostIncreasingSequence(sequence) {
     let count = 0; 
@@ -12,7 +12,9 @@ function almostIncreasingSequence(sequence) {
         }
     }
 
-    return count <= 1; 
+    if (count <= 1){
+        return true; 
+    }; 
 }
 
 console.log(almostIncreasingSequence(sequence)); 

@@ -26,8 +26,6 @@ console.log(same(arr1, arr2))
 console.log(same([1,2,3], [1,9,4]))
 
 
-
-
 const same1 = (arr1, arr2) => {
   if (arr1.length !== arr2.length){
     return false; 
@@ -37,6 +35,7 @@ const same1 = (arr1, arr2) => {
   for (let val of arr1){
     frequencyCounter2[val] = (frequencyCounter1[val] || 0 ) + 1
   }
+
   for (let val of arr2){
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
   }
