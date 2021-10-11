@@ -11,7 +11,7 @@
 // expected 50000 got undefined
 
 let num1 = 5; 
-let num2 = 0; 
+let num2 = 2; 
 
 let multiplyNumbers = function(num1, num2) {
   

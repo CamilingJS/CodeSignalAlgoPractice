@@ -15,7 +15,6 @@ let str = "racecar"
 
 console.log(str.split("").reverse().join(""))
 
-
 let isPalindrome = function(str) {
  if (str.split("").reverse().join("") === str ){
    return true
