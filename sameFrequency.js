@@ -14,7 +14,7 @@ let int2 = 5879385
 const sameFrequency = (int1, int2) => {
   let arrInt1 = int1+""
   let arrInt2 = int2+""
-  if(arrInt1.length !== arrInt1.length) return false;
+  if(arrInt1.length !== arrInt2.length) return false;
   let obj = {}
   for (let i =0; i < arrInt1.length; i++){
     let num = arrInt1[i]
