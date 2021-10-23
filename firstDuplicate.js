@@ -24,14 +24,33 @@
 
 // The element in a that occurs in the array more than once and has the minimal index for its second occurrence. If there are no such elements, return -1.
 
-a = [2,1,3,5,3,2]
+let a = [2,1,3,5,3,2]
 function firstDuplicate(a) {
-  let start = 0;
-  for (let end = 1; end < a.length; end++){
-      if (a[start] === a[end]){
-          start++
-          return a[end]
-      }
+  let myArr = []
+  for(let i=0; i < a.length; i++){
+    let num = a[i];
+    if (myArr[num] > 0){
+      return num
+    } else {
+      myArr.push(num)
+    } 
   }
+
+  return -1; 
 }
 console.log(firstDuplicate(a))
+
+function firstDuplicate1(a) {
+  let mySet = new Set()
+  
+  for(let i=0, n=a.length; i<n; i++){
+      if(mySet.has(a[i])){
+          return a[i]
+      } else {
+          mySet.add(a[i])
+      }
+  }
+  return -1
+    
+}
+console.log(firstDuplicate1(a)); 
