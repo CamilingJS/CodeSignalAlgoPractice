@@ -26,14 +26,12 @@
 
 a = [2,1,3,5,3,2]
 function firstDuplicate(a) {
-    let start = 0;
-    let firstDup = -1
-    for (let end = 1; end < a.length; end++){
-        if (a[start] === a[end]){
-            return firstDup = a[start]
-        }
-        console.log(firstDup)
-       return firstDup
-    }
+  let start = 0;
+  for (let end = 1; end < a.length; end++){
+      if (a[start] === a[end]){
+          start++
+          return a[end]
+      }
+  }
 }
-firstDuplicate(a)
+console.log(firstDuplicate(a))
