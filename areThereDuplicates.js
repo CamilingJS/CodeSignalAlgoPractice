@@ -12,7 +12,8 @@
 const areThereDuplicates = () => {
   let collection = {}
   for(let val in arguments){
-    collection[arguments[val]] = (collection[arguments[val]] || 0) + 1
+    // collection[arguments[val]] = (collection[arguments[val]] || 0) + 1
+    collection[arguments[val]] ? collection[arguments[val]]+=1 : collection[arguments[val]]=1 
   }
   
   for(let key in collection){
@@ -22,5 +23,5 @@ const areThereDuplicates = () => {
 
   } 
 
-console.log(areThereDuplicates(1,2,3))
+console.log(areThereDuplicates(1,2,3,3))
 
