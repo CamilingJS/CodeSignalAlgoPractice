@@ -11,6 +11,7 @@ const countUniqueValues = (arr) => {
     let num = arr[i]
     count[num] ? count[num] +=0 : count[num] =1; 
   }
+  console.log((Object.keys(count)))
   return Object.keys(count).length; 
 
 }
