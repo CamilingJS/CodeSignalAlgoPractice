@@ -54,3 +54,4 @@ function firstDuplicate1(a) {
     
 }
 console.log(firstDuplicate1(a)); 
+
