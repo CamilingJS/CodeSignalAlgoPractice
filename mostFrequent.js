@@ -8,11 +8,12 @@ const mostFreq = (paragraph, banned)=>{
   let newArr = paragraph.toLowerCase().split(" ") 
   let obj = {}; 
   console.log(newArr)
-
+  let currStr = []
   for (let i=0; i<newArr.length; i++){
-      let currStr = newArr[i]
+      currStr = newArr[i]
+      if(!banned[currStr]){
+      }
       obj[currStr] ? obj[currStr]++ : obj[currStr]=1; 
-    
   }
   console.log(obj)
   
