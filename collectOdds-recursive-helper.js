@@ -29,3 +29,11 @@ function collectOddValues1 (arr){
   return newArr; 
 }
 console.log(collectOddValues1([1,2,3,4,5,6,7,8,9]))
+
+
+//Pure Recursion Tips
+//For arrays, use methods like slice, the spread operator, and concaat that makes copies of 
+//arrays so you do no mutate them 
+//Remember that strings are immutalbe so you will need ot use methods like slice, substr, or 
+//substring to make copes of strings
+//To make copies of objects use Object.assign, or the spread operator 
