@@ -1,7 +1,7 @@
 # Algorithm Challenges: <a target="_blank" href="https://github.com/CamilingJS/CodeSignalAlgoPractice" >Visit Here</a> 
 
 ![alt tag](./imgs/algopractice.gif)
-This is a repository filled with algorithm challenges.
+#### This is a repository filled with algorithm challenges.
 
 ## How It's Made:
 
