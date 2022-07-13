@@ -1,3 +1,18 @@
-# CodeSignalAlgoPractice
-### To improve my algorithm solving skills I am documenting my work as I progress through the problems in CodeSignal. Each problem will have a ReadMe where I may explain my thinking and steps to solving the problem.(Edit: it became to cumbersome to create a ReadMe for each problem and so I opted to no longer doing thtat) The best way to learn something is to try to teach it, and so this repo is my effort to emulate this process. 
+# Algorithm Challenges: <a target="_blank" href="https://github.com/CamilingJS/CodeSignalAlgoPractice" >Visit Here</a> 
 
+![alt tag](./imgs/algopractice.gif)
+This is a repository filled with algorithm challenges.
+
+## How It's Made:
+
+**Tech used:** <img src="https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript"/>
+
+The first thing I do to get into my daily rythm is to solve an Algorithm Challenge! 
+
+## Optimizations
+
+Refactor and optimize my solutions, mostly for efficiency, and sometimes for readability. 
+
+## Lessons Learned:
+
+In order to be great at something, you have to be bad at it first.
