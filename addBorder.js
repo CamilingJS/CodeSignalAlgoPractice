@@ -36,9 +36,25 @@ function solution(picture) {
     
     let firstRow = ""
     let n = 0; 
-    while(n<width){
-        firstRow + "*"
+    while( n<width ){
+        firstRow += "*";
+        n++;
     }
     console.log(firstRow)
+    picture.push(firstRow)
+    picture.unshift(firstRow)
+    
+    console.log(picture)
+
+    let newArr = []
+    for(let i =0; i<picture.length; i++){
+        let text = picture[i]
+        let newText = `*${text}*`
+        newArr.push(newText)
+    }
+    
+
+    return newArr
+
 }
 console.log(solution(picture))
