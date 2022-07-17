@@ -27,15 +27,15 @@
 let inputArray = [5, 4, 3, 2, 1];
 function solution(inputArray) {
 
-    let count = 0;
+    let counts = 0;
 
-    for(let i = 0; i<inputArray.length; i++){
-        const num = inputArray[i];
-        let priorNum = inputArray[i-1]
-        console.log(num)
-        console.log(priorNum)
-        if(num-1 === inputArray){
-
+    for(let i = 0; i<inputArray.length-1; i++){ 
+        if(inputArray[i] >= inputArray[i+1]){
+            let diff = inputArray[i] - inputArray[i+1] + 1; 
+            counts += diff; 
+            inputArray[i+1] += diff; 
         }
     }
+    return counts; 
 }
+console.log(solution(inputArray))
