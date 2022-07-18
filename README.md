@@ -1,7 +1,6 @@
-# Algorithm Challenges: <a target="_blank" href="https://github.com/CamilingJS/CodeSignalAlgoPractice" >Visit Here</a> 
-
+# Algorithm Challenges 🤖 
 ![alt tag](./imgs/algopractice.gif)
-#### This is a repository filled with algorithm challenges.
+###  ⚠ This is a repository filled with algorithm challenges.
 
 ## How It's Made:
 
@@ -16,3 +15,7 @@ Refactor and optimize my solutions, mostly for efficiency, and sometimes for rea
 ## Lessons Learned:
 
 In order to be great at something, you have to be bad at it first.
+
+## <a target="_blank" href="https://github.com/CamilingJS/CodeSignalAlgoPractice" > 💻 I kindly ask you to visit my site!</a> 
+<img src="./imgs/QRCode_JayCamDev.png" alt="drawing" width="300"/>
+
