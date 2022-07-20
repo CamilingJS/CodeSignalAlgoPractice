@@ -17,3 +17,5 @@ function solution(yourLeft, yourRight, friendsLeft, friendsRight) {
     if (friendsMax !== yourMax) return false
     return yourLeft + yourRight === friendsRight + friendsLeft
 }
+
+console.log(solution(yourLeft, yourRight, friendsLeft, friendsRight))
