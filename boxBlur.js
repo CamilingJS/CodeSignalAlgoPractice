@@ -47,8 +47,31 @@
 let image = [[1, 1, 1], 
              [1, 7, 1], 
              [1, 1, 1]]
+
+//1.Iterate through each square that's not in the border
+//2.Get average of 3x3 area including square that you're on as center
+//2.return that image
 function solution(image) {
+  let imageArray = []
   
+  for(let y = 0; y < image.length-2; y++){
+    let line = []; 
+    for(let x=0; x<image[y].length-2; x++){
+      let sum = 0; 
+      let count = 0; 
+      for(let a=y; a< y+3; a++){
+        for(let b = x; b < x+3; b++ ){
+          sum+= image[a][b];
+          count++; 
+
+        }
+      }
+      line.push(Math.floor(sum/count))
+    }
+    imageArray.push(line)
+  }
+  return imageArray; 
+
 }
 
 console.log(solution(image))
