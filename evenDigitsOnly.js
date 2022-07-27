@@ -19,20 +19,17 @@
 
 // true if all digits of n are even, false otherwise.
 
-let n = 642386
+let n = 2612486
 
 function solution(n) {
+    
     let arr = (""+n).split('')
-    console.log(arr)
-    for(let i = 0; i<arr.length; i++){
-        let int = +arr[i]
-        if(int % 2 !== 0){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i]%2 !== 0){       
             return false
-        }else{
-            return true; 
         }
     }
-    return; 
+    return true
 
 }
 
