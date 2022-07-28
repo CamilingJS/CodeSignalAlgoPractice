@@ -27,6 +27,7 @@ let varName = "var_1__Int"
 
 function solution(varName) {
 
+    return /^[a-z_]\w*$/i.test(varName);
 }
 
 console.log(solution(varName))
