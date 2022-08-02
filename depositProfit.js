@@ -47,17 +47,17 @@ let rate = 20
 let threshold = 170
 
 function solution(deposit, rate, threshold) {
-    let bal = 0
+
     let year = 0
-    while(bal < threshold){
-        let interest = deposit * (rate/100)
-        console.log(interest)
-        bal = bal + interest
+    while(deposit < threshold){
+       
+        deposit += (deposit*rate)/100
         
+        year++
         
     }
     
-    return bal
+    return year
 
 }
 
