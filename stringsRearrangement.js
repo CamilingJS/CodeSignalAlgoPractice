@@ -40,17 +40,44 @@
 
 
 
-let inputArray = ["aba", "bbb", "bab"]
+let inputArray = ["ab", 
+"ad", 
+"ef", 
+"eg"]
 function solution(inputArray) {
-    let str = ""
+    let str = []
     for(let i =0; i<inputArray.length; i++){
         let vals = inputArray[i].split('')
         console.log(vals)
+        
         for(let j = 0; j<vals.length; j++){
-            return str+=j[i]
+            let letter = vals[j]
+            console.log(letter)
+            str.push(letter)
+            
+            
         }
         
     }
-    return str
+    console.log(str) 
+    let obj = {}
+    for(let i=0; i<str.length; i++){
+        let letter = str[i]
+        obj[letter] ?obj[letter]++ : obj[letter]=1 
+    }
+    console.log(obj)
+    let arrVal = Object.values(obj)
+    console.log(arrVal)
+    let status = false
+    for(let i=0; i<arrVal.length; i++){
+        if(arrVal[i]-arrVal[i+1] == 1 || arrVal[i]-arrVal[i+1] == 0 ){
+            status = true
+        } else{
+            statue = false
+        }
+       
+    }
+    return status
+
 }
 console.log(solution(inputArray))
