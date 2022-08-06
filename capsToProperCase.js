@@ -2,15 +2,12 @@ let paragraph = "WE’VE BEEN WHOLESALING HIGH QUALITY CUSTOM SHOP DECKS, BLANK 
 
 function properCase (str) {
   let arr = str.split(" ")
-  console.log(arr)
   let newArr = []
   for(let i = 0; i<arr.length; i++){
     newArr.push(arr[i].toLowerCase())
   }
-  
-  console.log(newArr)
   let newStr = newArr.join(" ")
-  let firstLetter = newStr[0].toLocaleUpperCase()
+  let firstLetter = newStr[0].toUpperCase()
   let results = newStr.replace(newStr[0], firstLetter)
   
   return results
