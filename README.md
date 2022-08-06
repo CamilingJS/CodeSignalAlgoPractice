@@ -1,4 +1,4 @@
-# Algorithm Challenges 🤖 
+# Algorithm Challenges  🚀🌛
 ![alt tag](./imgs/algopractice.gif)
 ###  ⚠ This is a repository filled with algorithm challenges.
 
