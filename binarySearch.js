@@ -3,7 +3,7 @@
 //passed to the fn is located. If the value is not found, return -1
 
 let arr = [1,2,3,4,5,6]
-let val = 2; 
+let val = 6; 
 
 const notBinarySearch = (arr, val) => {
   for (let i = 0; i < arr.length; i++){
@@ -24,10 +24,10 @@ const binarySearch = (arr, val) => {
     let middle = Math.floor((min + max) / 2);
     let currentElement = arr[middle];
 
-    if ( arr[middle] < val ){
+    if ( currentElement < val ){
       min = middle +1; 
     }
-    else if (arr[middle] > val ) {
+    else if (currentElement > val ) {
       max = middle -1;
     }
     else {
