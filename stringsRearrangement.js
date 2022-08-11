@@ -40,44 +40,110 @@
 
 
 
-let inputArray = ["ab", 
-"ad", 
-"ef", 
-"eg"]
-function solution(inputArray) {
-    let str = []
-    for(let i =0; i<inputArray.length; i++){
-        let vals = inputArray[i].split('')
-        console.log(vals)
+// let inputArray = ["ab", 
+// "ad", 
+// "ef", 
+// "eg"]
+// function solution(inputArray) {
+//     let str = []
+//     for(let i =0; i<inputArray.length; i++){
+//         let vals = inputArray[i].split('')
+//         console.log(vals)
         
-        for(let j = 0; j<vals.length; j++){
-            let letter = vals[j]
-            console.log(letter)
-            str.push(letter)
+//         for(let j = 0; j<vals.length; j++){
+//             let letter = vals[j]
+//             console.log(letter)
+//             str.push(letter)
             
             
-        }
+//         }
         
-    }
-    console.log(str) 
-    let obj = {}
-    for(let i=0; i<str.length; i++){
-        let letter = str[i]
-        obj[letter] ?obj[letter]++ : obj[letter]=1 
-    }
-    console.log(obj)
-    let arrVal = Object.values(obj)
-    console.log(arrVal)
-    let status = false
-    for(let i=0; i<arrVal.length; i++){
-        if(arrVal[i]-arrVal[i+1] == 1 || arrVal[i]-arrVal[i+1] == 0 ){
-            status = true
-        } else{
-            statue = false
-        }
+//     }
+//     console.log(str) 
+//     let obj = {}
+//     for(let i=0; i<str.length; i++){
+//         let letter = str[i]
+//         obj[letter] ?obj[letter]++ : obj[letter]=1 
+//     }
+//     console.log(obj)
+//     let arrVal = Object.values(obj)
+//     console.log(arrVal)
+//     let status = false
+//     for(let i=0; i<arrVal.length; i++){
+//         if(arrVal[i]-arrVal[i+1] == 1 || arrVal[i]-arrVal[i+1] == 0 ){
+//             status = true
+//         } else{
+//             statue = false
+//         }
        
-    }
-    return status
+//     }
+//     return status
+
+// }
+// console.log(solution(inputArray))
+
+
+function solution(inputArray) {
+    
+    let answer = [];
+   permute(inputArray, inputArray.length,answer);
+   console.log(answer)
+   let result = false;
+   for (let i = 0; i < answer.length; i++) {
+       for (let j = 1; j < answer[i].length; j++) {
+           if ( arrayTest(answer[i][j], answer[i][j-1]) == false ) {
+               console.log(answer[i][j])
+               break;
+           }
+           if( j == answer[i].length-1 ){
+               return true;
+           }
+       }
+   }
+   return false;
 
 }
-console.log(solution(inputArray))
+
+function arrayTest (str1, str2) {
+   if (str1 === str2) {
+       return false;
+   } 
+   let test = false;
+   for (let i = 0; i < str1.length; i++) {
+       if (str1[i] != str2[i]){
+           if (test == false) {
+               test = true;
+           }else{
+               return false;
+               
+           }
+       }
+   }
+   
+   return test
+}
+
+
+function permute(array,k,answer){
+   if (k === 1) {
+      answer.push([...array])
+       
+   }else{
+       for (let i = 0; i < k;i++){
+           permute(array, k-1,answer);
+           if (k % 2){
+               let x = array[i];
+               array[i] = array[k -1];
+               array[k -1]=x;
+           }else{
+               x = array[0];
+               array[0] = array[k -1];
+               array[k -1]=x;
+           }
+       }
+   }
+   
+
+}
+
+console.log(solution(["aba", "bbb", "bab"]))
