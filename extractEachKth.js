@@ -46,6 +46,6 @@ console.log(solution(inputsArray, ks))
 function solution(inputArray, k) {
     return inputArray.filter((e, i) => (i + 1) % k)
 }
-let inputArray = [2, 4, 6, 8, 10]
-let k = 2
+let inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let k = 3
 console.log(solution(inputArray, k))
