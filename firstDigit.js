@@ -23,17 +23,14 @@
 
 
 function solution(inputString) {
-    let arr = inputString.split('')
-    console.log(arr)
-    for(let i =0; i<arr.length; i++){
-        console.log(typeof(parseInt(arr[i])))
-
-        if(typeof(parseInt(arr[i])) == Number){
-            console.log(parseInt(arr[i]))
-
-        }
-
+    const matches = inputString.match(/(\d+)/);
+    if (matches) {
+            let num = matches[0]
+            console.log(num.slice(0,1))
+            let num1 = num.slice(0,1)
+            return num1
     }
+    
 }
 
 let inputString = "var_1__Int"
