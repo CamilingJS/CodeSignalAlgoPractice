@@ -24,6 +24,7 @@
 
 function solution(inputString) {
     const matches = inputString.match(/(\d+)/);
+    console.log(matches)
     if (matches) {
             let num = matches[0]
             console.log(num.slice(0,1))
