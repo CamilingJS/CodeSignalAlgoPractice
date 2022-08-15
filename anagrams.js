@@ -17,6 +17,8 @@ const isAnagram = (str1, str2) => {
     obj[letter] ? obj[letter] +=1 : obj[letter] = 1; 
   }
 
+  console.log(obj)
+
   for (let i = 0; i < str2.length; i++){
     let letter = str2[i]
     if (!obj[letter]){
