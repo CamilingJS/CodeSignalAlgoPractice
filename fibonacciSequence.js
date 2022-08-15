@@ -18,8 +18,13 @@ function fib(n){
 }
 console.log(fib(21))
 
-const fibonacci = (n) => {
-  if(n<3) return 1; 
-  return fibonacci(n-1) + fibonacci(n-2)
+
+
+
+let f = 5
+function fibonacci(f) {
+  if (f < 3)
+    return 1;
+  return fibonacci(f - 1) + fibonacci(f - 2);
 }
-console.log(fibonacci(21))
+console.log(fibonacci(f))
