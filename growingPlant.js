@@ -55,19 +55,19 @@ let downSpeed = 3
 let desiredHeight = 443
 
 function solution(upSpeed, downSpeed, desiredHeight) {
-    let dayCount =0
-    let height =0
+
+    let height = 0
+    let dayCount = 0
     while(height<desiredHeight){
-        height += upSpeed
         dayCount++
+        height +=upSpeed
+        if(height>=desiredHeight){
+            return dayCount
+        }
+        height -=downSpeed
+        
     }
-    console.log(dayCount*downSpeed)
-    
 
- 
-
-    console.log(dayCount)
-    console.log(height)
     return dayCount
 
 
