@@ -58,26 +58,12 @@ let weight2 = 3
 let maxW = 2
 
 function solution(value1, weight1, value2, weight2, maxW) {
-    let totalItems = 0
-
-    if (weight1 > maxW && weight2> maxW){
-        return totalItems
-    }
-
-    if(weight1 + weight2 <= maxW){
-        totalItems += value1+value2
-    }
-    if(weight1 + weight2 > maxW && weight1>weight2  && weight1==maxW){
-        totalItems+= value1
-    }
-
-    if(weight1 + weight2 > maxW && weight2>weight1  ){
-        totalItems+= value2
-    }
-
     
-
-    return totalItems 
+    return Math.max(
+        maxW >= weight1 && value1,
+        maxW >= weight2 && value2,
+        maxW >= weight1 + weight2 && value1 + value2
+    );
 
 }
 
