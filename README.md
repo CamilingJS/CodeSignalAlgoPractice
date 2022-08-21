@@ -16,6 +16,6 @@ Refactor and optimize my solutions, mostly for efficiency, and sometimes for rea
 
 In order to be great at something, you have to be bad at it first.
 
-## <a target="_blank" href="https://github.com/CamilingJS/CodeSignalAlgoPractice" > 💻 I kindly ask you to visit my site!</a> 
-<img src="./imgs/QRCode_JayCamDev.png" alt="drawing" width="300"/>
+## <a target="_blank" href="https://jaycam.dev/"  > 💻 I kindly ask you to visit my site!</a> 
+<img src="./imgs/QRCode_JayCamDev.png" alt="QR code to website jaycam.dev" width="200"/>
 
