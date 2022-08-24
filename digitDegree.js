@@ -23,8 +23,25 @@
 
 // [output] integer
 
-let n = 5
+let n = 50
 function solution(n) {
+    let sol = 0
+    const strN = ""+n
+    if(strN.length === 1){
+        sol +=0
+    }
+    if(strN.length > 1){
+        for(let i =0; i<strN.length; i++){
+            let sum = parseInt(strN[i]) + parseInt(strN[i+1])
+            console.log(sum)
+            sol +=sum
+            console.log(sol)
+        }
+    }
+
+
+
+    return sol
 
 }
 console.log(solution(n))
