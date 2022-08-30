@@ -34,29 +34,31 @@
 
 function solution(inputString) {
     let obj = {}
-    let status = true
-    for(let i=0; i<inputString.length; i++){  
+    let status = false
+    for(let i=0; i<inputString.length; i++)
+    {  
         let letter = inputString[i]
         obj[letter] ? obj[letter]+=1 : obj[letter]=1
     }
-    console.log(obj)
     console.log(Object.values(obj))
     let arr = Object.values(obj)
-    for(let i=1; i<arr.length; i++){
-        console.log(arr[0])
-        console.log(arr[i+1])
-        if(arr[i] != arr[0])
-        {
-            status = false
-        } else 
+    for(i=1; i<arr.length; i++)
+    {
+        if(arr[0] == arr[i])
         {
             status = true
             i++
+            console.log(arr[i])
+            console.log(status)
+        } else 
+        {
+            status = false
         }
-        return status
     }
+
     return status
+
 }
 
-let inputString = "aabbc"; 
+let inputString = "bbbaacdafe"; 
 console.log(solution(inputString))
