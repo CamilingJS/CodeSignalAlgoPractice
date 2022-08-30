@@ -19,7 +19,6 @@ console.log(notBinarySearch(arr,val))
 const binarySearch = (arr, val) => {
   let min = 0;
   let max = arr.length -1 ;
-  
   while (min <= max){
     let middle = Math.floor((min + max) / 2);
     let currentElement = arr[middle];
