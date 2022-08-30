@@ -57,9 +57,16 @@ function fruitDict(fruits){
     }
     return fruitMap
 }
-console.log(fruitDict(fruits))
 
-  const fruitDictionary = fruitDict(fruits)
+  function searchFruit(fruit, fruits) {
+    const fruitMap = fruitDict(fruits)
+    if(fruitMap[fruit]){
+      return fruitMap[fruit]
+    } else {
+      return null
+    }
+  }
+  console.log(searchFruit("Apple", fruits))
 
 
 
