@@ -8,7 +8,7 @@ const fruits = [
       name: 'Blueberry'
     },
     {
-      priceInCents: 100,
+      priceInCents: 100, 
       name: 'Apple'
     },
     {
@@ -52,10 +52,13 @@ function fruitDict(fruits){
             fruitMap[fruit.name].push(fruit.priceInCents)
         } else
         {
-            fruitMap[fruit.name] = fruit.priceInCents
+            fruitMap[fruit.name] = [fruit.priceInCents]
         }
+
+        console.log(fruitMap)
     }
     return fruitMap
+  
 }
 
   function searchFruit(fruit, fruits) {
