@@ -22,11 +22,11 @@
 // [output] string
 
 function solution(address) {
-    if (address.includes("@"))
-    console.log(address.includes("@"))
-    return address.split("@")[1]
-
+    let arr = address.split("@")
+    return arr[arr.length-1]
 }
 
 const address = "\"very.unusual.@.unusual.com\"@usual.com"
 console.log(solution(address));
+
+
