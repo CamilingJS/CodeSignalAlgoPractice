@@ -33,30 +33,11 @@
 
 
 function solution(inputString) {
-    let obj = {}
-    let status = false
-    for(let i=0; i<inputString.length; i++)
-    {  
-        let letter = inputString[i]
-        obj[letter] ? obj[letter]+=1 : obj[letter]=1
-    }
-    console.log(Object.values(obj))
-    let arr = Object.values(obj)
-    for(i=1; i<arr.length; i++)
-    {
-        if(arr[0] == arr[i])
-        {
-            status = true
-            i++
-            console.log(arr[i])
-            console.log(status)
-        } else 
-        {
-            status = false
-        }
-    }
-
-    return status
+    s = "abcdefghijklmnopqrstuvwxyz"
+    for (i = 1; i < s.length; i++) {
+        if (inputString.split(s[i]).length-1 > inputString.split(s[i-1]).length-1) {
+            return false}}
+    return true
 
 }
 
