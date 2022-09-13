@@ -22,3 +22,21 @@ function bubbleSort(arr){
 }
 
 console.log(bubbleSort([-2,1,2,4,30,-10]))
+
+
+function bubSort(arr) {
+    let bubbled = false;
+    for (let i = 0; i < arr.length; i++) {
+        bubbled = false
+        for (let j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr, j, j + 1)
+                bubbled = true
+            }
+        }
+        if(!bubbled) {
+            return arr
+        }
+    }
+    return arr
+}
