@@ -28,3 +28,22 @@ function selectionSort (arr){
 console.log(selectionSort([4,3,2,1,-1,-2,-3,-4]))
 
 
+
+function selectionSort(arr) {
+    // loop through array with index i
+    for(let i = 0; i < arr.length; i += 1) {
+      // find the minIdx from i to length - 1
+      const minIdx = findMinIndex(arr, i, arr.length - 1)
+      // minIdx is the smallest of all unsorted
+    
+      // if i !== minIdx
+      if(i !== minIdx) {
+        // swap them
+        swap(arr, i, minIdx)
+      }
+    }
+    // return array
+    return array
+  }
+
+

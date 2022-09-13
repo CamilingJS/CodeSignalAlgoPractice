@@ -29,8 +29,8 @@ Jonathan Camiling
 
 }
 
-let title ="Frontend Engineer"
-let companyName ="your company"
+let title ="Web Designer & Developer"
+let companyName ="City and County of San Francisco"
 
 console.log(coverLetter (title, companyName));
 
