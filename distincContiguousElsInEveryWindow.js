@@ -1,27 +1,32 @@
 function countContiguousDistinct(k, arr) {
-   
-    let temp = [];
-    let result = [];
-    
+
     // helper function
     const uniqueCount = array => {
-      return new Set(array).size;
+    return new Set(array).size;
     }
+  
+    let sol = []
+    let maxSum = 0; 
+    let tempSum = 0; 
+    if(arr.length < k) return null; 
     
-    
-    for (let i = 0; i < arr.length; i++) {
-      temp.push(arr[i]);
-      if(temp.length === k) {
-        result.push(uniqueCount(temp));
-        // remove first item for next iteration
-        temp.shift();
-      }
+    for(let i=0; i<k; i++){
+        console.log(uniqueCount(arr))
+        sol.push(uniqueCount(arr))
     }
-    
-    return result;
-    
-    
-  }
+    console.log(sol)
+
+    for(let i = k; i<arr.length; i++){
+        tempSum = tempSum - arr[i - k] + arr[i];
+
+        sol.push(uniqueCount(arr))
+    }
+
+    console.log(sol)
+
+
+
+}
   
   
 let arr = [1, 2, 1, 3, 4, 2, 3]
