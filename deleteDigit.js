@@ -20,28 +20,14 @@
 // [JavaScript] Syntax Tips
 
 function solution(n) {
-    let arr = (""+n).split('')
-    console.log(arr)
 
-    let maxSum = 0;
-    let tempSum = 0; 
-    let maxArr = [];
-    let tempArr = []
-    for(let i=0; i < n; i++){
-        maxSum +=arr[i]
-        maxArr = arr.slice(0, arr.length-1)
+    let m = 0;
+    for(let d = 1;d <= n; d *= 10){
+        let t = n%d + (Math.floor(Math.floor(n/d)/10)*d)
+        m = Math.max(m,t);
     }
-    tempSum = maxSum; 
+    return m;
 
-    console.log(maxArr)
-   
-
-    for(let i = n; i < arr.length; i++){
-        tempSum = tempSum - arr[i - n] + arr[i]
-        maxSum = Math.max(maxSum, tempSum)
-    }
-
-    return maxSum
 }
 
 let n = 152
