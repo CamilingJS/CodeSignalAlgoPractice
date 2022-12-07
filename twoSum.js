@@ -2,7 +2,7 @@
 // return the indices of the numbers that add up to the target
 
 let nums = [3,4,8,2] 
-let target = 6
+let target = 10
 
 // Edge cases
 //  no nums add to target
@@ -30,8 +30,13 @@ const twoSumm = function(nums, target){
     for(let i=0; i < nums.length; i++){
         const num = nums[i]
         const want = target - num
+
+        //here using bracket notation doesn't work bc if the index is zero it will evaluate to false and it won't got into the if block
+        // you can possibly use if(ht[want] != undefined) if it definitely not exist 
+        // or use the "in" syntax 
         if(want in ht){
             const leftIndex = ht[want]
+            console.log(ht[want])
             return [leftIndex, i]
         } else{
             ht[num] = i; 
