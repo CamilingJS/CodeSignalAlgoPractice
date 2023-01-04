@@ -9,14 +9,11 @@ let groupAnagrams = function (arr){
 
         //if sorted array already exist then push another str in that sorted array
         if(ht[sortedStr]) ht[sortedStr].push(str)
-
         else ht[sortedStr] = [str]
-        
     }
-
     //creates an array of the values from ht
+    console.log(ht)
     return Object.values(ht);
-
 }
 
 console.log(groupAnagrams(arr))
