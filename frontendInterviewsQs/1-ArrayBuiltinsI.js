@@ -60,9 +60,7 @@ console.log(findDuplicates(["a", "b", "c", "b", "a", "d", "e", "d", "f"]))
 // QUESTION 4: ************************************
 // filterByKeyValue
 // Given a list of objects, filter the list to only include objects whose property values match the given key-value pairs.
-
 // Example
-
 // const arr = [
 //   { name: "John", age: 20 },
 //   { name: "Jane", age: 20 },
@@ -74,3 +72,17 @@ console.log(findDuplicates(["a", "b", "c", "b", "a", "d", "e", "d", "f"]))
 // // => [{ name: "John", age: 20 }]
 // filterByKeyValue(arr, { age: 20 });
 // // => [{ name: "John", age: 20 }, { name: "Jane", age: 20 }]
+
+const filterByKeyValue = function (arr, obj){
+    return arr.filter((item)=>{
+        return Object.keys(obj).every((key) => item[key] === obj[key])
+    })
+}
+
+const arr = [
+  { name: "John", age: 20 },
+  { name: "Jane", age: 20 },
+  { name: "John", age: 21 },
+];
+
+console.log(filterByKeyValue(arr, { name: "John" }))
