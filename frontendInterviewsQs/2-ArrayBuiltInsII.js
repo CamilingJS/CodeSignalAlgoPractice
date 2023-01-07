@@ -42,3 +42,23 @@ const getStats = function(arr){
 console.log(getStats([1, 2, 3, 4, 5, 6]))
 
 
+
+// sumOfAllAfter
+// Given an array of numbers, return an array of numbers that are the sum of each number and all numbers that come after it in the array.
+// Examples
+// sumOfAllAfter([1, 2, 3, 4, 5]) // [15, 14, 12, 9, 5]
+// sumOfAllAfter([1, 2, 3, 4, 5, 6]) // [21, 20, 18, 15, 11, 6]
+
+const sumOfAllAfter =(arr)=>{
+    if(!Array.isArray(arr)) return [];
+    return arr.map((num, index) =>
+        arr.slice(index).reduce((acc, curr) => acc + curr, 0)
+    )
+}
+
+console.log(sumOfAllAfter([1, 2, 3, 4, 5, 6]))
+
+
+
+
+
