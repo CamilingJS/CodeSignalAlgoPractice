@@ -47,10 +47,7 @@ console.log(isArrPalindrome(["train", "car", "boat", "car", "train"]))
 
 const findDuplicates = function(arr){
     const duplicates = arr.filter((el, index) => {
-        console.log(index)
-        console.log(arr.indexOf(el))
         return arr.indexOf(el) !== index
-       
     } )
     return [...new Set(duplicates)]
 }
@@ -86,3 +83,5 @@ const arr = [
 ];
 
 console.log(filterByKeyValue(arr, { age: 20 }))
+
+
