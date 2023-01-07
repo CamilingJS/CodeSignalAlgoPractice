@@ -85,4 +85,4 @@ const arr = [
   { name: "John", age: 21 },
 ];
 
-console.log(filterByKeyValue(arr, { name: "John" }))
+console.log(filterByKeyValue(arr, { age: 20 }))
