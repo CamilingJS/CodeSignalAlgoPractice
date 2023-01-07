@@ -11,8 +11,7 @@
 // expected 0 got undefined
 
 let n = 13;
-
-var countOdd = function(n) {
+const countOdd = function(n) {
   let oddCount = 0; 
   while (n--){
     if (n%2 !=0){

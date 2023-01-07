@@ -11,8 +11,7 @@
 // ❌ sumMultiples(2000) // it doesnt break for a large num
 // expected 931668 got undefined
 
-let n = 10;
-
+let n = 11;
 var sumMultiples = function(n) {
   let counter = 0; 
   while(n--){

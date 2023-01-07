@@ -26,13 +26,14 @@
         Finally convert the object to a STRING, and then print it to the console
         You should see the full object, and NOT [Object, object]
     */ 
-        const email = "Aaron@freemote.com ";
+        const email = "jonathan@jaycam.dev ";
         const password = "helloworld";
         const tweets = [
             {content: 'im hungry', timestamp: Date.now() - 10000}, 
             {content: 'just got to mcdonalds', timestamp: Date.now() - 5000},
             {content: 'finished eating', timestamp: Date.now()}
         ];
+        
         function encrypt(pw) {
             return pw.split('').map(char => char.charCodeAt(0) + 10).join('')
         }

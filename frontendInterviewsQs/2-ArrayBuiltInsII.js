@@ -10,7 +10,6 @@ const nextToDuplicate = function(arr, num){
 }
 console.log(nextToDuplicate([1, 2, 3, 3, 4, 5], 3))
 
-
 // moveNegatives
 // Given an array of negative and positive numbers, move all negative numbers to the front of the array while maintaining the order of all numbers.
 // Examples
