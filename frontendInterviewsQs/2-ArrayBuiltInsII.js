@@ -33,7 +33,7 @@ console.log(moveNegatives([1, -3, 3, -4, 5]))
 const getStats = function(arr){
     if(!Array.isArray(arr) || arr.length === 0) return false 
     return{
-        sum: arr.reduce((acc, curr) => acc + curr, 0),
+        // sum: arr.reduce((acc, curr) => acc + curr, 0),
         average: arr.reduce((acc, curr) => acc + curr, 0) / arr.length,
         min: Math.min(...arr),
         max: Math.max(...arr),

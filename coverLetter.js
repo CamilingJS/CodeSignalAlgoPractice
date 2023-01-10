@@ -29,8 +29,8 @@ Jonathan Camiling
 
 }
 
-let title ="Full Stack Devloper"
-let companyName ="Educe Group"
+let title ="Software QA Engineer"
+let companyName ="Beta Breakers"
 
 console.log(coverLetter (title, companyName));
 
