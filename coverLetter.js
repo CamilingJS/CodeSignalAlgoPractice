@@ -13,11 +13,11 @@ ${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}
  
 Dear Hiring Manager, 
  
-I am excited to be applying for the position of ${title} with ${companyName}. I’ve been programming web applications using HTML, CSS, JavaScript, and React to create responsive and user-friendly experiences since 2019. As a self-taught developer, I am currently leaning on the freelance market to strengthen my knowledge and experience, particularly in E-Commerce, to hone my Software Development skills. 
+I am excited to be applying for the position of ${title} with ${companyName}, which I have found via the ${jobBoard} job board. I share the passion for building and creating in all things web, especially in Frontend Web Development which I hope to play a role and contribute with impact to the ${companyName} team. 
  
-I am currently a Lead Billing Specialist and have obtained 7+ years of experience servicing 40+ clients nationwide in the Employee Benefits field. Overseeing 4+ million dollars in monthly transactions, I play an integral role in designing, collaborating, and deploying tools for billing efficiencies, accurate financial transactions, client implementation, and customer satisfaction. I believe my experiences in communicating with low to top-level managers, my focus on customer success, and my collaborative mindset would be of great value as a ${title} with ${companyName}. Due to my perpetual desire to learn, I learned how to code, albeit later in my career. I am a Software Engineer with a rigorous training agency program, which has expanded my skills, tools, knowledge, and creativity where I can passionately and purposely create solutions for client problems and needs. 
+As a Lead Billing Specialist, I have obtained 7+ years of experience servicing 40+ clients nationwide in the Employee Benefits field. Overseeing 4+ million dollars in monthly transactions, I have experience working in high-intensity workflows delivering quality and accurate work under tight deadlines. Now as a Frontend Software Developer with JayCam.Dev, my self-founded freelance agency, I work on a variety of full-stack applications from custom design, coding, and product development. Currently, my focus is understanding the E-Commerce space by customizing Shopify themes using the Liquid template language and building a full-stack app called "KimbapShop" an online store selling K-Pop merchandise built on React, Redux Toolkit, Express, and NodeJS. 
 
-I believe my experience in business finance, my passion for coding, and my knack for graphic and web design would make me a great fit as a ${title} at ${companyName}. As a member of your team, I am confident I would be able to tackle complex challenges, resolve minor bugs, monitor the technical performance of internal systems, enthusiastically participate in the development of automated unit tests, and collaborate and communicate effectively with the team. For further review of my work, I invite you to my freelance business website at www.jaycam.dev and my Github profile www.github.com/CamilingJS. I hope you will consider my application and I look forward to hearing from you.		
+My resourcefulness, determination, and hard work ethic make me a perfectly capable candidate for the ${title} role with the ${companyName} team. Thank you for taking the time to review my resume and consider my application. I am excited to bring a multitude of experience and expertise to an organization like yours, where I can contribute to the effort of providing transformational services and products to ${companyName} stakeholders. I look forward to hearing back from you soon.  
  
 Sincerely,
  
@@ -29,8 +29,9 @@ Jonathan Camiling
 
 }
 
-let title ="Software QA Engineer"
-let companyName ="Beta Breakers"
+let title ="Jr. e-Commerce Operator"
+let companyName ="Spigen"
+let jobBoard = "Indeed"
 
 console.log(coverLetter (title, companyName));
 
