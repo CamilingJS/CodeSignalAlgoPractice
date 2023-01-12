@@ -29,8 +29,8 @@ Jonathan Camiling
 
 }
 
-let title ="Web & APP Developer & Designer"
-let companyName ="Hairrich"
+let title ="Junior Software Developer"
+let companyName ="Reli"
 let jobBoard = "Indeed"
 
 console.log(coverLetter (title, companyName));
