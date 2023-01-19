@@ -6,7 +6,7 @@ function coverLetter (title, companyName) {
 
  let paragraph = `
 Jonathan Camiling
-(650) 246-4953
+(562) 391-7228
 jonathan@jaycam.dev
  
 ${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}
@@ -29,8 +29,8 @@ Jonathan Camiling
 
 }
 
-let title ="Junior Software Developer"
-let companyName ="Reli"
+let title ="Associate Software Developer"
+let companyName ="California Steel Industries, Inc."
 let jobBoard = "Indeed"
 
 console.log(coverLetter (title, companyName));
