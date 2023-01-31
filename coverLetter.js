@@ -30,10 +30,10 @@ Jonathan Camiling
 
 }
 
-let title ="Junior Software Engineer"
-let companyName ="Hippocratic AI"
+let title ="Front-End Developer"
+let companyName ="Applied Medical"
 let jobBoard = "Indeed"
-let norcal = true
+let norcal = false
 
 console.log(coverLetter (title, companyName, norcal));
 
