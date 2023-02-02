@@ -28,17 +28,18 @@ let countVowels = function(s) {
   return vowelCounter
 }
 
-// var countVowels = function(s) {
-  
-//   var counter = 0;
-//     for (var char of s) {
-//         if (char === 'a' || char === 'e' || 
-//             char === 'i' || char === 'o' || char === 'u') {
-//                 counter++;
-//         }
-//     }
-//     return counter;
-  
-// }
 
 console.log(countVowels(s))
+
+const vowelCountah = function(s){
+  let count = 0; 
+  const vowels = ["a", "e", "i", "o", "u"]
+  for(let i=0; i<s.length; i++){
+    let char = s[i]
+    if(vowels.includes(char)){
+      count += 1
+    }
+  }
+  return count
+}
+console.log(vowelCountah(s))

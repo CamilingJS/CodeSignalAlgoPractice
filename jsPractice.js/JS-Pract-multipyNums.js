@@ -23,3 +23,13 @@ let multiplyNumbers = function(num1, num2) {
 }
 
 console.log(multiplyNumbers(num1, num2))
+
+
+const multiplier = function(num1, num2){
+  let sol = 0; 
+  while(num1--){
+    sol += num2
+  }
+  return sol 
+}
+console.log(multiplier(num1, num2))

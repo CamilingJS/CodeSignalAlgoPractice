@@ -27,6 +27,8 @@ for(let i = 0; i < arrFirstNames.length; i++){
   console.log(arrFirstNames[i]);
   console.log(`${arrFirstNames[i]} Camiling`);
 } 
+
+
 /*
     ☑️ copy the code you wrote above and paste it below this comment
     ☑️ now "refactor" this code into a "declarative" "for of" loop
@@ -81,4 +83,10 @@ for (let key in computer) {
   console.log(`${key} spec is ${computer[key]}`);
 }
 
+
+let objLength = 0; 
+for ( let key in computer){
+  objLength += 1
+}
+console.log(objLength)
 
