@@ -20,3 +20,10 @@ console.log(node)
 //      it makes a copy every time it makes an assignment 
 
 console.log(node)
+
+
+//functional 
+function ListNode(value){
+    this.value = value;
+    this.next = value; 
+}

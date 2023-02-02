@@ -9,8 +9,6 @@ const tweets = [
 //{Monday: [text1, text2], Tuesday:[text3]}
 const tweetsByDay = {};
 for (let tweet of tweets) {
-  console.log(tweet.day);
-  console.log(tweet.text)
   if(tweetsByDay[tweet.day]){
       tweetsByDay[tweet.day].push(tweet.text)
   } else {
@@ -18,4 +16,18 @@ for (let tweet of tweets) {
   }
 }
 
-console.log(tweetsByDay);
+// console.log(tweetsByDay);
+
+const twitter = function(tweets){
+  const ht = {}
+  for(let tweet of tweets){
+    if(ht[tweet.day]){
+      ht[tweet.day].push(tweet.text)
+    } else{
+      ht[tweet.day] = [tweet.text]
+    }
+  }
+  return ht
+}
+
+console.log(twitter(tweets))

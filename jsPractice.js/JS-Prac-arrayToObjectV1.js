@@ -7,3 +7,14 @@ for (let fruit of fruits) {
   fruitCounts[fruit] ? fruitCounts[fruit] ++ : fruitCounts[fruit] = 1
   }
 console.log(fruitCounts)
+
+const counter = function(arr){
+  const ht = {}
+  for(let item of arr){
+    ht[item] ? ht[item]++ : ht[item]=1
+  }
+  return ht
+  
+}
+console.log(counter(fruits))
+

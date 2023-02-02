@@ -11,7 +11,7 @@
 
 //Other solution 
 // Pseudo 
-    // for every numer in nums
+    // for every number in nums
     // while left < right 
     // too low? move left
     // too high? move right 
@@ -27,8 +27,6 @@ const threeSum = function(nums, target){
 
         //handling duplicates 
         if(i>0 && nums[i] === nums[i-1]) continue
-
-
         while(left < right){
             let total = nums[i] + nums[left] + nums[right]
             if(total === target){
@@ -56,6 +54,7 @@ const threeSum = function(nums, target){
 // sorting, innerloop, outerloop
 // nlogn + n^2 
 // O(n^2) time complexity 
+
 // constant space O(1)
 
 console.log(threeSum(nums, target))

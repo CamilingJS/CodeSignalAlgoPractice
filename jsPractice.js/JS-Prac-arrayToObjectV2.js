@@ -9,8 +9,18 @@ const users = [
 const usersMap = {};
 
 for (let user of users){
-  console.log(user.username);
+  
   usersMap[user.username] = user; 
 }
 
-console.log(usersMap);
+// console.log(usersMap);
+
+const objMaker = function(arr){
+  const ht = {}
+  for(let key of arr ){
+    ht[key.description] = key; 
+  }
+  
+  return ht
+}
+console.log(objMaker(users))
