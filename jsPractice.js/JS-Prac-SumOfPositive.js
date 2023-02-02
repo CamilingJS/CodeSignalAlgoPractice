@@ -1,10 +1,6 @@
 // ➕ sumOfPositive
 // Given an array of numbers, add together the positive nums & return the sum
-
 // If no numbers are positive, return 0
-
-
-
 // Ex. sumOfPositive([1, -2, 3, 4]), returns 8
 // 0 / 3 Tests Passed
 // ❌ sumOfPositive([1,-2,3,4]) // It should work with one negative
@@ -21,7 +17,6 @@ let sumOfPositive = function(nums) {
     if (num < 0) {
       return true; 
     }
-
    })) {
     return 0; 
   }
@@ -31,13 +26,28 @@ let sumOfPositive = function(nums) {
       return true; 
     }
   })
+
   let sum = positives.reduce((acc, num) => {
     let sum = acc + num;
     return sum;
   })
   return sum; 
-
-
 }
 
 console.log(sumOfPositive(nums))
+
+let sumOfPos = function(arr){
+  if(arr.every(num=> num<0)){return 0}
+  let positives  = arr.filter(num => num>0)
+  console.log(positives)
+
+  let sum = positives.reduce((curr, acc) => {
+    let sum = curr+acc
+    return sum
+  })
+
+  return sum
+
+}
+
+console.log(sumOfPos(nums))

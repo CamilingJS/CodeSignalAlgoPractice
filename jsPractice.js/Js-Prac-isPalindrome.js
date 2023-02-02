@@ -23,3 +23,10 @@ let isPalindrome = function(str) {
  }
 }
 console.log(isPalindrome(str))
+
+let str1 = "annaanna"
+
+let isPalindrome2 = function(str){
+  return str.split('').reverse().join("") === str
+}
+console.log(isPalindrome2(str1))
