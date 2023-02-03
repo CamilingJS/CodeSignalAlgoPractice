@@ -53,6 +53,15 @@ const findDuplicates = function(arr){
 }
 console.log(findDuplicates(["a", "b", "c", "b", "a", "d", "e", "d", "f"]))
 
+const dups = function(arr){
+    const dups = arr.filter((item, index) => {
+        return arr.indexOf(item) !== index 
+    })
+    const sol = [...new Set(dups)]
+    return sol
+}
+console.log(dups(["a", "b", "c", "b", "a", "d", "e", "d", "f"]))
+
 
 // QUESTION 4: ************************************
 // filterByKeyValue
@@ -72,7 +81,8 @@ console.log(findDuplicates(["a", "b", "c", "b", "a", "d", "e", "d", "f"]))
 
 const filterByKeyValue = function (arr, obj){
     return arr.filter((item)=>{
-        return Object.keys(obj).every((key) => item[key] === obj[key])
+        console.log(Object.keys(obj))
+        return Object.keys(obj).every((key) => obj[key] === item[key])
     })
 }
 
@@ -82,6 +92,6 @@ const arr = [
   { name: "John", age: 21 },
 ];
 
-console.log(filterByKeyValue(arr, { age: 20 }))
+console.log(filterByKeyValue(arr, { name: "Jane" }))
 
 
