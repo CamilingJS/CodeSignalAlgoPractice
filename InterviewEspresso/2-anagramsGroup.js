@@ -5,9 +5,8 @@ const arr = ['jonathan', 'onathanj', 'john', 'ohnj', 'joy', 'yoj']
 let groupAnagrams = function (arr){
     const ht = {}
     for(let str of arr){
-        console.log(str.split(''))
         const sortedStr = str.split('').sort().join()
-
+        console.log(sortedStr)
         //if sorted array already exist then push another str in that sorted array
         if(ht[sortedStr]) ht[sortedStr].push(str)
         else ht[sortedStr] = [str]
