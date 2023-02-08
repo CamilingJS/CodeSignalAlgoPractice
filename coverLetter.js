@@ -30,8 +30,8 @@ Jonathan Camiling
 
 }
 
-let title ="Front End Developer"
-let companyName ="2.7 August Apparel Inc."
+let title ="Node Developer"
+let companyName ="Strategic Employment"
 let jobBoard = "Indeed"
 let norcal = false
 
