@@ -23,7 +23,20 @@ console.log(node)
 
 
 //functional 
-function ListNode(value){
-    this.value = value;
-    this.next = value; 
+// function ListNode(value){
+//     this.value = value;
+//     this.next = value; 
+// }
+
+//How do we traverse through a linked list...
+let on = head; 
+while(on !== null){
+    console.log(on.val)
+    on = on.next
 }
+
+
+
+
+
+

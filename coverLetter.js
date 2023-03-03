@@ -30,8 +30,8 @@ Jonathan Camiling
 
 }
 
-let title ="Node Developer"
-let companyName ="Strategic Employment"
+let title ="Web Developer"
+let companyName ="Otoy, Inc"
 let jobBoard = "Indeed"
 let norcal = false
 
