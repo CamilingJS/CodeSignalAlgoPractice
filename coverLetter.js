@@ -30,9 +30,9 @@ Jonathan Camiling
 
 }
 
-let title ="Front End Software Engineer"
-let companyName ="The Trade desk"
-let jobBoard = "LinkedIn"
+let title ="Web Developer"
+let companyName ="Indigo Billing"
+let jobBoard = "Indeed"
 let norcal = false
 
 console.log(coverLetter (title, companyName, norcal));
