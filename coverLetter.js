@@ -30,9 +30,9 @@ Jonathan Camiling
 
 }
 
-let title ="Web Developer"
-let companyName ="Indigo Billing"
-let jobBoard = "Indeed"
+let title ="Front End Developer"
+let companyName ="eTeam Inc."
+let jobBoard = "Zip Recruiter"
 let norcal = false
 
 console.log(coverLetter (title, companyName, norcal));

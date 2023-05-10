@@ -50,3 +50,25 @@ const fuzzBizz = function(num){
 }
 
 console.log(fuzzBizz(9))
+
+
+
+const pistBuzz = function (num){
+    let msg = []
+    for(let i=1; i<=num; i++){
+        if(i%3 === 0 && i%5=== 0){
+            msg.push("hola") 
+        }
+        else if(i%3 === 0){
+            msg.push("three") 
+        }
+        else if(i%5 === 0){
+            msg.push("five") 
+        }
+        else {
+            msg.push(i.toString())
+        }
+    }
+    return msg
+}
+console.log(pistBuzz(100))
