@@ -9,13 +9,13 @@ function findFirstUniqueChar(str) {
     for(let i=0; i<str.length; i++){
         const char = str[i]
         //if unique '==1' then return index 
-        if(hashTable[char] == 1) return i; 
+        if(hashTable[char] == 1) return `${char} at index ${i}`; 
     }
     return -1; 
 
 }
 
-let str = 'jonathanjoth'
+let str = 'jonathanjothx'
 console.log(findFirstUniqueChar(str))
 
 
@@ -31,4 +31,22 @@ function findFirstUniqChar(str){
     return -1; 
 }
 
-console.log(findFirstUniqChar('jonathanjoth'))
+console.log(findFirstUniqChar('jonathanjothx'))
+
+
+let tweet = "jonathanjothx"; 
+
+function fUC(str){
+    let hT = {}; 
+    for(let char of str){
+        if(hT[char]) hT[char]++; 
+        else hT[char] =1; 
+    }
+    for(let i = 0; i<str.length; i++){
+        let char = str[i]; 
+        if(hT[char]==1) return `${char} is unique at index ${i}`
+    }
+
+    return -1
+}
+console.log(fUC(tweet))

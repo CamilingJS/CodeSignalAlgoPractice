@@ -72,3 +72,34 @@ const pistBuzz = function (num){
     return msg
 }
 console.log(pistBuzz(100))
+
+
+//Given number as an input, print out every integer form 1 to that number. 
+//When divisible by 3 print "Fizz"
+//When divisible by 5 print "Buzz"
+//When divisible by 4 and 5 print "Fizz Buzz"
+
+// input number
+// output array of strings 
+
+function fissBuss(num){
+   let message = []; 
+   for(let i =1; i<num; i++){
+    if(i%3===0 && i%5===0){
+        message.push("Kobe Curry")
+    }
+    else if(i%3 ===0){
+        message.push("Curry")
+    }
+    else if(i%5 ===0){
+        message.push("Kobe")
+    }
+    else {
+        message.push(`${i}`)
+    }
+   }
+
+   return message; 
+}
+
+console.log(fissBuss(30))
