@@ -11,5 +11,44 @@ def spin_words(sentence):
             arr[index] = word[::-1]
     return " ".join(arr)
 
-print(spin_words(sentence))
+def spin_wordsA(sentence):
+    words = [word for word in sentence.split(" ")]
+    words = [word if len(word) < 5 else word[::-1] for word in words]
+    return " ".join(words)
+
+# **************************************************************
+# **************************************************************
+
+# Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+
+# Rules for a smiling face:
+
+# Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+# A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+# Every smiling face must have a smiling mouth that should be marked with either ) or D
+# No additional characters are allowed except for those mentioned.
+
+# Valid smiley face examples: :) :D ;-D :~)
+# Invalid smiley faces: ;( :> :} :]
+# Example
+# countSmileys([':)', ';(', ';}', ':-D']);       // should return 2;
+# countSmileys([';D', ':-(', ':-)', ';~)']);     // should return 3;
+# countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
+
+smilesArray = [':D', ':~)', ';~D', ':)']
+def smileCounter(arr):
+    smileCount = 0
+    print(arr)
+    for str in arr:
+        if (str == ":)" or str == ";)" or str == ":D" or str == ";D" or str == ":-D" or str == ";-D"  or str == ":~)" or str == ";~)" or str == ';~D'
+ ):
+            smileCount += 1
+    return smileCount
+
+print(smileCounter(smilesArray))
+
+def count_smileys(arr):
+	return len(list(filter(lambda x: x in [':D',':~D',':-D',';D',';~D',';-D',':)',':~)',':-)',';)',';~)',';-)'],arr)))
+print(count_smileys(smilesArray))
+
    
