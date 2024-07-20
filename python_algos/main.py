@@ -1,5 +1,5 @@
 
-# Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+# 1) Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
 #  "Hey fellow warriors"  --> "Hey wollef sroirraw" 
 sentence = "Hey fellow warriors"
 def spin_words(sentence):
@@ -11,15 +11,16 @@ def spin_words(sentence):
             arr[index] = word[::-1]
     return " ".join(arr)
 
-def spin_wordsA(sentence):
-    words = [word for word in sentence.split(" ")]
-    words = [word if len(word) < 5 else word[::-1] for word in words]
-    return " ".join(words)
+# def spin_wordsA(sentence):
+#     words = [word for word in sentence.split(" ")]
+#     words = [word if len(word) < 5 else word[::-1] for word in words]
+#     return " ".join(words)
 
 # **************************************************************
 # **************************************************************
+# **************************************************************
 
-# Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+# 2) Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
 
 # Rules for a smiling face:
 
@@ -38,17 +39,88 @@ def spin_wordsA(sentence):
 smilesArray = [':D', ':~)', ';~D', ':)']
 def smileCounter(arr):
     smileCount = 0
-    print(arr)
     for str in arr:
         if (str == ":)" or str == ";)" or str == ":D" or str == ";D" or str == ":-D" or str == ";-D"  or str == ":~)" or str == ";~)" or str == ';~D'
  ):
             smileCount += 1
     return smileCount
 
-print(smileCounter(smilesArray))
+# print(smileCounter(smilesArray))
 
-def count_smileys(arr):
-	return len(list(filter(lambda x: x in [':D',':~D',':-D',';D',';~D',';-D',':)',':~)',':-)',';)',';~)',';-)'],arr)))
-print(count_smileys(smilesArray))
+# def count_smileys(arr):
+# 	return len(list(filter(lambda x: x in [':D',':~D',':-D',';D',';~D',';-D',':)',':~)',':-)',';)',';~)',';-)'],arr)))
+# print(count_smileys(smilesArray))
 
+
+# **************************************************************
+# **************************************************************
+# **************************************************************
+
+# 3) Quick practice:
+# def odd_or_even(num):
+#     if num % 2 == 0:
+#         return "Even"
+#     return "Odd"
+
+# def slugify(str, sep="-"):
+#     return str.lower().strip().replace(" ", sep)
+# print(slugify("Hello this is to test slugify", "**"))
+
+# def count_vowels(str):
+#     count = 0
+#     for char in str:
+#         if char in "aeiou":
+#             count += 1
+#     return count
+# print(count_vowels("aeiouy"))
+
+# def outer():
+#     animal = "Func animal"
+#     print(animal)
+# animal = "Global animal"
+# outer()
+
+# **************************************************************
+# **************************************************************
+# **************************************************************
+
+# Your job is to write a function which increments a string, to create a new string.
+
+# If the string already ends with a number, the number should be incremented by 1.
+# If the string does not end with a number. the number 1 should be appended to the new string.
+
+
+# phrase = "foobar23"
+# def increment_string(phrase):
+#     newString = ""
+#     tempStrNum = ""
+#     numContainer = 0
+#     for char in phrase:
+#         if char.isdigit() != True:
+#             newString += char
+#         print(newString)
+#     tempStrNum += phrase[len(newString)::1]
+#     numContainer = int(tempStrNum) + 1
+#     print(numContainer)
+#     tempStrNum = str(numContainer)
+#     print(tempStrNum)
+#     print(newString + tempStrNum)
+#     return newString + tempStrNum
    
+# increment_string(print(phrase))
+
+user_name = "Jonathan1990"
+
+def increment_string(user_name):
+    new_string = ""
+    str_int_container = ""
+    int_container = 0
+    for char in user_name:
+        if char.isdigit() != True:
+            new_string += char
+    str_int_container = user_name[len(new_string)::1]
+    int_container = int(str_int_container) + 1
+    str_int_container = str(int_container)
+    return new_string + str_int_container
+
+increment_string(print(user_name))
