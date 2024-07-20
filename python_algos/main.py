@@ -108,19 +108,15 @@ def smileCounter(arr):
 #     return newString + tempStrNum
    
 # increment_string(print(phrase))
-
-user_name = "Jonathan1990"
-
-def increment_string(user_name):
+def increment_string(arg):
     new_string = ""
     str_int_container = ""
-    int_container = 0
-    for char in user_name:
+    for char in arg:
         if char.isdigit() != True:
             new_string += char
-    str_int_container = user_name[len(new_string)::1]
-    int_container = int(str_int_container) + 1
-    str_int_container = str(int_container)
-    return new_string + str_int_container
-
-increment_string(print(user_name))
+    if len(new_string) == len(arg):
+        return new_string
+    else:
+        str_int_container = arg[len(new_string)::1]
+    return (new_string + (str(int(str_int_container)+1)))
+print(increment_string("foo012"))
