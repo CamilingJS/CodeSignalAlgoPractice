@@ -126,16 +126,31 @@ def increment_string_simple(arg):
 
 passcode = "Jon12athan0023"
 
-def increment_string(arg):
+# Enumerate function
+
+def enum_sample(arg):
     rev_arg = arg[::-1]
-    arg_len = len(arg)
-    num_string_container = ""
-    while arg_len > 0:
-        char = rev_arg[arg_len::]
-        if char.isdigit() == True:
-            print("hello")
-        print(num_string_container)
-        arg_len -= 1
+    num_str_container = ""
+    new_str_container = ""
+    num_container = 0
+    pre_zero_str = ""
+    for i, element in enumerate(rev_arg):
+        if element.isdigit() == True:
+            num_str_container = element + num_str_container
+        if element.isdigit() == False:
+            break
+    num_str_len = len(num_str_container)
+    for char in num_str_container:
+        if char == '0':
+            pre_zero_str = pre_zero_str + char
+            print("line 146: ", pre_zero_str)
+        else:
+            pre_zero_str = ""
+    if num_str_container:
+        num_container = int(num_str_container) + 1
+    print("line 148: ", num_container)
+    new_str_container = new_str_container + (arg[:-num_str_len:])
+    print("line 150: ", new_str_container)
+    return new_str_container + pre_zero_str + str(num_container)
 
-print(increment_string(passcode))
-
+print(enum_sample("foo"))
