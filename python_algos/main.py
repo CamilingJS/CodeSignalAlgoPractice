@@ -128,7 +128,7 @@ passcode = "Jon12athan0023"
 
 # Enumerate function
 
-def enum_sample(arg):
+def increment_string(arg):
     rev_arg = arg[::-1]
     num_str_container = ""
     new_str_container = ""
@@ -149,8 +149,16 @@ def enum_sample(arg):
     if num_str_container:
         num_container = int(num_str_container) + 1
     print("line 148: ", num_container)
-    new_str_container = new_str_container + (arg[:-num_str_len:])
+    if len(num_str_container) > 0:
+        new_str_container = new_str_container + (arg[:-num_str_len:])
+    elif len(num_str_container) == 0:
+        new_str_container = arg
+        print("here")
     print("line 150: ", new_str_container)
-    return new_str_container + pre_zero_str + str(num_container)
 
-print(enum_sample("foo"))
+    if num_container == 0:
+        return new_str_container
+    else:
+        return new_str_container + pre_zero_str + str(num_container)
+
+print(increment_string("fo1o001"))
