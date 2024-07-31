@@ -209,14 +209,42 @@ podium = drivers[:3]
 #     print(f"{place}: {driver}")
 #     place +=1
 
-flavors = ["chocolate", "vanilla", "rocky road", "strawberry"]
+# flavors = ["chocolate", "vanilla", "rocky road", "strawberry"]
 
-evens = [2, 4, 6]
-evens.reverse()
+# evens = [2, 4, 6]
+# evens.reverse()
 
-nums = [4,6,9,10,65,32,-10, -100]
-nums.sort(reverse=True)
+# nums = [4,6,9,10,65,32,-10, -100]
+# nums.sort(reverse=True)
 
-sorted_flavors = sorted(flavors)
+# sorted_flavors = sorted(flavors)
 
-print("hello...there...hi...".split('...'))
+# print("hello...there...hi...".split('...'))
+
+test_scores = {
+    "student1": 90,
+    "student2": 91,
+    "student3": 93,
+    "student4": 89,
+    "student5": 95,
+    "student6": 99,
+}
+
+# total_score = 0
+# for score in test_scores.values():
+#     total_score += score
+# print(total_score/len(test_scores))
+
+# for key in test_scores.keys():
+#     print(key, test_scores[key])
+
+# for item in test_scores.items():
+#     print(item)
+
+top_score = 0
+top_student = ""
+for student, score in test_scores.items():
+    if score > top_score:
+        top_score = score
+        top_student = student
+print(f"{top_student} got the best score with {top_score}")
