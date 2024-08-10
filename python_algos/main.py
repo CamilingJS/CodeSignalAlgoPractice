@@ -386,3 +386,12 @@ def get_top_students(**kwargs):
 # print(get_top_students(tim=91, stacy=83, carlos=97, jim=69))
 # print(get_top_students(colt=61, elton=76))
 # print(get_top_students(kitty=80, blue=95, toad=91))
+
+# *****************************************************************
+
+import calendar
+
+print(calendar.isleap(2024))
+
+print(calendar.weekday(1990, 4, 3))
+print(calendar.weekday(1990, 10, 27))
